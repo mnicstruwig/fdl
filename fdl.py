@@ -19,6 +19,7 @@ def download(url, chunk_size=4096):
                               stacklevel=2)
                 total_length = 0
             with tqdm(total=total_length,
+                      desc=local_path,
                       unit='B',
                       unit_scale=True,
                       unit_divisor=1024) as pbar:
